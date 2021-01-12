@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Page_Main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Todo_List</title>
+</head>
+
+<body>
+
+    <section>
+        <table>
+            <tr>
+                <td><canvas id="my_canvas" width="520" height="510"></canvas></td>
+                <td>
+                    <div class="wrapper">
+                        <!-- Show good morning good night wish as per time -->
+                        <script>
+                            document.write("<Top=20px><font size=+4 style=' color: black; '>");
+                            var day = new Date();
+                            var hr = day.getHours();
+                            if (hr >= 0 && hr < 12) {
+                                document.write("Good Morning!");
+                            } else if (hr == 12) {
+                                document.write("Good Noon!");
+                            } else if (hr >= 12 && hr <= 17) {
+                                document.write("Good Afternoon!");
+                            } else {
+                                document.write("Good Evening!");
+                            }
+                            document.write("</font></Top>");
+                        </script>
+                        <header>Todo App</header>
+                        <!-- inputFieldS -->
+                        <div class="inputField">
+                            <input type="text" placeholder="Add your new todo">
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                        <ul class="todoList">
+                            <!-- data are comes from local storage -->
+                        </ul>
+                        <div class="footer">
+                            <span>You have <span class="pendingTasks"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <div class="set">
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+        </div>
+
+        <div class="set set2">
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+        </div>
+
+        <div class="set set3">
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves1.png?alt=media&token=3b00e229-fbd0-4b19-b9e0-e841693221d2" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves2.png?alt=media&token=4d391ed7-3d4b-457a-bee2-dae926be7cb3" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves3.png?alt=media&token=25ae3af4-2550-4010-8d10-025fc3c4f1ea" alt="Leaf" title="Leaf">
+            </div>
+
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fleaves4.png?alt=media&token=73cc7170-f391-46f7-8a7e-db7b34708d7f" alt="Leaf" title="Leaf">
+            </div>
+        </div>
+    </section>
+
+    <script src="Page_Main.js"></script>
+
+</body>
+
+</html>
